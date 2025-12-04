@@ -1,4 +1,4 @@
-package com.atguigu.product.config;
+package com.atguigu.order.config;
 
 import feign.Logger;
 import feign.Retryer;

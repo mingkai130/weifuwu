@@ -1,9 +1,8 @@
-package com.atguigu.product.service.impl;
+package com.atguigu.order.service.impl;
 
 
-import com.alibaba.csp.sentinel.annotation.SentinelResource;
-import com.alibaba.csp.sentinel.slots.block.BlockException;
-import com.atguigu.product.service.OrderService;
+import com.atguigu.order.feign.ProductFeignClient;
+import com.atguigu.order.service.OrderService;
 import com.order.Order;
 import com.product.Product;
 import lombok.extern.slf4j.Slf4j;
@@ -28,10 +27,16 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     RestTemplate restTemplate;
 
+    @Autowired
+    ProductFeignClient productFeignClient;
+
+
     @Override
     public Order createOrder(Long productId, Long userId) {
-        Product product = getProductFromRemoteWithBalance(productId);
+//        Product product = getProductFromRemoteWithBalance(productId);
 
+        // 使用feign远程调用
+        Product product = productFeignClient.getProductById(productId);
 
 
         Order order = new Order();
