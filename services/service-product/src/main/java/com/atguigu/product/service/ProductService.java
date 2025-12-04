@@ -1,0 +1,9 @@
+package com.atguigu.product.service;
+
+
+import com.product.Product;
+
+public interface ProductService {
+
+    Product getProductById(Long id);
+}

@@ -1,0 +1,30 @@
+package com.atguigu.product.controller;
+
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.atguigu.product.service.OrderService;
+import com.order.Order;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/order")
+public class OrderController {
+
+
+    @Autowired
+    OrderService orderService;
+
+    /**
+     * 创建订单
+     */
+    @GetMapping("/create")
+    public Order createOrder(@RequestParam("userId") Long userId, @RequestParam("productId") Long productId) {
+        return orderService.createOrder(productId, userId);
+    }
+
+}
