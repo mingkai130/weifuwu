@@ -1,0 +1,6 @@
+D:\github\weifuwu-demo\services\seata-storage\src\main\java\com\atguigu\storage\bean\StorageTbl.java
+D:\github\weifuwu-demo\services\seata-storage\src\main\java\com\atguigu\storage\controller\StorageRestController.java
+D:\github\weifuwu-demo\services\seata-storage\src\main\java\com\atguigu\storage\mapper\StorageTblMapper.java
+D:\github\weifuwu-demo\services\seata-storage\src\main\java\com\atguigu\storage\SeataStorageMainApplication.java
+D:\github\weifuwu-demo\services\seata-storage\src\main\java\com\atguigu\storage\service\impl\StorageServiceImpl.java
+D:\github\weifuwu-demo\services\seata-storage\src\main\java\com\atguigu\storage\service\StorageService.java

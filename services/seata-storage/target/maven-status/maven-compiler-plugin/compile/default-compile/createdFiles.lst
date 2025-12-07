@@ -1,0 +1,6 @@
+com\atguigu\storage\controller\StorageRestController.class
+com\atguigu\storage\service\StorageService.class
+com\atguigu\storage\bean\StorageTbl.class
+com\atguigu\storage\mapper\StorageTblMapper.class
+com\atguigu\storage\service\impl\StorageServiceImpl.class
+com\atguigu\storage\SeataStorageMainApplication.class
